@@ -10,12 +10,11 @@
   <!-- Menu superior de cursos -->
   <ion-row>
     <ion-col size="12">
-      <ion-segment value="desenvolvimento_sistemas">
-
+      <ion-segment value="desenvolvimento_sistemas" (ionChange)="selecionarCards($event)">
         <ion-segment-button value="desenvolvimento_sistemas">
           <ion-label>Desenvolvimento de Sistemas</ion-label>
         </ion-segment-button>
-
+      
         <ion-segment-button value="informatica_internet">
           <ion-label>Informatica Internet</ion-label>
         </ion-segment-button>
@@ -23,143 +22,154 @@
         <ion-segment-button value="quimica">
           <ion-label>Química</ion-label>
         </ion-segment-button>
+        
       </ion-segment>
     </ion-col>
   </ion-row>
-
-
   <!-- Linha Desenvolvimento de Sistemas -->
-  <ion-row>
-    <ion-col size="4">
-      <ion-card>
-        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-        <ion-card-header>
-          <ion-card-title>Programação Mobile</ion-card-title>
-          <ion-card-subtitle>Bootstrap & Ionic</ion-card-subtitle>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Here's a small text description for the card content. Nothing more, nothing less.
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
 
-    <ion-col size="4">
-      <ion-card>
-        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-        <ion-card-header>
-          <ion-card-title>Programação Mobile</ion-card-title>
-          <ion-card-subtitle>HTML & CSS</ion-card-subtitle>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Here's a small text description for the card content. Nothing more, nothing less.
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-
-    <ion-col size="4">
-      <ion-card>
-        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-        <ion-card-header>
-          <ion-card-title>Programação Mobile</ion-card-title>
-          <ion-card-subtitle>JavaScript & TypeScript</ion-card-subtitle>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Here's a small text description for the card content. Nothing more, nothing less.
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-  </ion-row>
-
+  <ng-container *ngIf=" this.item_selecionado == 'desenvolvimento_sistemas'">
+    <ion-row>
+      <ion-col size="4">
+        <ion-card>
+          <img alt="Bootstrap & Ionic img" src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          <ion-card-header>
+            <ion-card-title>Programação Mobile</ion-card-title>
+            <ion-card-subtitle>Bootstrap & Ionic</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+  
+      <ion-col size="4">
+        <ion-card>
+          <img alt="HTML & CSS img" src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          <ion-card-header>
+            <ion-card-title>Programação Mobile</ion-card-title>
+            <ion-card-subtitle>HTML & CSS</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+  
+      <ion-col size="4">
+        <ion-card>
+          <img alt="JavaScript & TypeScript img" src="https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          <ion-card-header>
+            <ion-card-title>Programação Mobile</ion-card-title>
+            <ion-card-subtitle>JavaScript & TypeScript</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ng-container>    
   <!-- Linha Informática para Internet -->
-  <ion-row>
-    <ion-col size="4">
-      <ion-card>
-        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-        <ion-card-header>
-          <ion-card-title>Programação Web</ion-card-title>
-          <ion-card-subtitle>Bootstrap & Ionic</ion-card-subtitle>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Here's a small text description for the card content. Nothing more, nothing less.
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
 
-    <ion-col size="4">
-      <ion-card>
-        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-        <ion-card-header>
-          <ion-card-title>Programação Web</ion-card-title>
-          <ion-card-subtitle>HTML & CSS</ion-card-subtitle>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Here's a small text description for the card content. Nothing more, nothing less.
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-
-    <ion-col size="4">
-      <ion-card>
-        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-        <ion-card-header>
-          <ion-card-title>Programação Web</ion-card-title>
-          <ion-card-subtitle>PHP</ion-card-subtitle>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Here's a small text description for the card content. Nothing more, nothing less.
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-  </ion-row>
-
+  <ng-container *ngIf=" this.item_selecionado == 'informatica_internet'">
+    <ion-row>
+      <ion-col size="4">
+        <ion-card>
+          <img alt="Bootstrap & Ionic img" src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          <ion-card-header>
+            <ion-card-title>Programação Web</ion-card-title>
+            <ion-card-subtitle>Bootstrap & Ionic</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+  
+      <ion-col size="4">
+        <ion-card>
+          <img alt="HTML & CSS img" src="https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          <ion-card-header>
+            <ion-card-title>Programação Web</ion-card-title>
+            <ion-card-subtitle>HTML & CSS</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+  
+      <ion-col size="4">
+        <ion-card>
+          <img alt="PHP img" src="https://images.pexels.com/photos/11035390/pexels-photo-11035390.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          <ion-card-header>
+            <ion-card-title>Programação Web</ion-card-title>
+            <ion-card-subtitle>PHP</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ng-container>    
   <!-- Linha Química -->
-  <ion-row>
-    <ion-col size="4">
-      <ion-card>
-        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-        <ion-card-header>
-          <ion-card-title>Química</ion-card-title>
-          <ion-card-subtitle>Bootstrap & Ionic</ion-card-subtitle>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Here's a small text description for the card content. Nothing more, nothing less.
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
 
-    <ion-col size="4">
-      <ion-card>
-        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-        <ion-card-header>
-          <ion-card-title>Programação Mobile</ion-card-title>
-          <ion-card-subtitle>HTML & CSS</ion-card-subtitle>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Here's a small text description for the card content. Nothing more, nothing less.
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
+  <ng-container *ngIf=" this.item_selecionado == 'quimica'">
+    <ion-row>
+      <ion-col size="4">
+        <ion-card>
+          <img alt="Química Orgânica img" src="https://images.pexels.com/photos/2280568/pexels-photo-2280568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          <ion-card-header>
+            <ion-card-title>Química</ion-card-title>
+            <ion-card-subtitle>Química Orgânica</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+  
+      <ion-col size="4">
+        <ion-card>
+          <img alt="Balanceamento img" src="https://images.pexels.com/photos/220989/pexels-photo-220989.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          <ion-card-header>
+            <ion-card-title>Química</ion-card-title>
+            <ion-card-subtitle>Balanceamento</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+  
+      <ion-col size="4">
+        <ion-card>
+          <img alt="Química Basica img" src="https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          <ion-card-header>
+            <ion-card-title>Química</ion-card-title>
+            <ion-card-subtitle>Química Basica</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ng-container>    
 
-    <ion-col size="4">
-      <ion-card>
-        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-        <ion-card-header>
-          <ion-card-title>Programação Mobile</ion-card-title>
-          <ion-card-subtitle>JavaScript & TypeScript</ion-card-subtitle>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Here's a small text description for the card content. Nothing more, nothing less.
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-  </ion-row>
+
+
+
+
 </ion-content>
