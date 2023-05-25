@@ -1,27 +1,79 @@
-#container {
-  text-align: center;
+$primary-color:#f05b05;
+$secondary-color:#F28705;
+$tertiary-color:#8C3503;
+$dark-color:#402A01;
+$light-color:#F2F2F2;
+$gray-scale: #1E1E1E;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+
+
+.calendario {
+  
+  color: $light-color;
+  &__backgroud {
+    background-color: $gray-scale;
+    border-radius: 3%;
+
+    margin-block: 10px;
+    padding-inline: 25px;
+    padding-block: 50px;
+  }
+  
+
+  &__foto {
+    border-radius: 2%;
+
+  }
+
+  &__mes {
+    font-size: 1.6rem;
+    color: $secondary-color;
+  }
+
+  &__ano {
+    font-size: 1.6rem;
+    color: $tertiary-color
+  }
+
+  &__dia-semana {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  &__dia {
+    font-size: 1rem;
+    
+  }
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+@media screen and (max-width: 415px) {
+  .calendario {
+    &__mes {
+      font-size: 1.2rem;
+    }
+  
+    &__ano {
+      font-size: 1.2rem;
+    }
+  
+    &__dia-semana {
+      font-size: 0.8rem;
+    }
+  
+    &__dia {
+      font-size: 0.6rem;
+    }
+  }
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+@media screen and (max-width: 326px) {
+  .calendario {
+    &__dia-semana {
+      font-size: 0.7rem;
+    }
+  
+    &__dia {
+      font-size: 0.6rem;
+    }
+  }
 }
