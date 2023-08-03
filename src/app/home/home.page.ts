@@ -9,5 +9,13 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule],
 })
 export class HomePage {
-  constructor() {}
+  constructor() {
+    this.getData()
+  }
+  getData() {
+    fetch('/api/usuario/listar-todos')
+    .then(T => T.json())
+    .then(console.log);
+    
+  }
 }
